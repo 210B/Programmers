@@ -5,19 +5,15 @@ def solution(n, words):
         for j in range(0,i-1):
             if words[i] == words[j]:
                 cnt = i
-                break;
+                return [i%n+1,i//n+1]
         if words[i][0] != words[i-1][-1]:
             cnt = i
-            break;
-        elif cnt!=0:
-            break;
+            return [i%n+1,i//n+1]
         else:
             i+=1
-        print(i)
     if i == len(words):
         return [0,0]
-    else:
-        return [i%n+1,i//n+1]
+
 '''                
 def solution(n, words):
 
